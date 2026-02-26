@@ -22,3 +22,16 @@ locals {
   EOC
 EOF
 }
+
+# service1
+locals {
+  service1_name                 = "service1"
+  service1_admin_container_port = 8081
+  service1_admin_image          = "public.ecr.aws/docker/library/httpd:latest"
+  service1_api_container_port   = 8080
+  service1_api_image            = "public.ecr.aws/docker/library/nginx:latest"
+  service1_db_instance_class    = "db.t4g.micro"
+  service1_db_name              = "appdb"
+  service1_db_password          = "changeme123!"
+  service1_db_username          = "appuser"
+}
